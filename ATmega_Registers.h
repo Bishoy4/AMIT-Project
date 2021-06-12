@@ -58,6 +58,7 @@
 #define TCCR0           (*(volatile uint8*)(0x53))
 #define TCNT0           (*(volatile uint8*)(0x52))    
 #define OCR0            (*(volatile uint8*)(0x5C))
+#define OCR1A            (*(volatile uint16*)(0x49))
 #define TIMSK           (*(volatile uint8*)(0x59))
 
 /******************************* Timer1  ****************************************************/
@@ -65,7 +66,7 @@
 #define TCCR1A           (*(volatile uint8*)(0x4F))
 #define TCCR1B           (*(volatile uint8*)(0x4E))
 #define OCR1             (*(volatile uint16*)(0x4A))
-
+#define ICR1             (*(volatile uint16*)(0x46))
 
 /*****************************  UART  ****************************************************/
 
@@ -78,7 +79,8 @@
 
 /****************************  SPI   ***************************************************/
 
-typedef struct  
+
+typedef struct
 {
 	uint8 SPCR;
 	uint8 SPSR;

@@ -59,9 +59,8 @@ uint8 SPI_Read(void)				/* SPI read data function */
 	while(!(SPI->SPSR & (1<< 7 )));	/* Wait till reception complete */
 	return(SPI->SPDR);			/* Return received data */
 }
-void SPI_Write(uint8 data)			/* SPI Write data function */
+uint8 SPI_Receive(void)			/* SPI Receive data function */
 {
-	SPI->SPDR =data;
 	while(!(SPI->SPSR & (1<< 7 )));	/* Wait till reception complete */
-				/* Return received data */
+	return(SPI->SPDR);			/* Return received data */
 }

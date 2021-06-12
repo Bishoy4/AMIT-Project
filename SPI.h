@@ -24,7 +24,7 @@ uint8 SPI_Transiver(uint8 data);
 
 uint8 SPI_Read(void);	
 
-void SPI_Write(uint8 data);
+uint8 SPI_Receive(void);
 
 
 #endif /* SPI_H_ */
